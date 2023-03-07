@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="회원가입"
+        android:textColor="#ffd400"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/nameArea"
+        android:background="@drawable/radius"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:hint="이름"
+        android:layout_height="55dp"/>
+
+    <EditText
+        android:id="@+id/emailArea"
+        android:background="@drawable/radius"
+        android:layout_margin="12dp"
+        android:hint="이메일"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <EditText
+        android:id="@+id/id2Area"
+        android:background="@drawable/radius"
+        android:layout_margin="12dp"
+        android:hint="아이디"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <EditText
+        android:id="@+id/password2Area"
+        android:background="@drawable/radius"
+        android:layout_margin="12dp"
+        android:hint="비밀번호"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <CheckBox
+        android:id="@+id/checkArea"
+        android:text="개인정보 수집 및 이용약관에 동의합니다."
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"/>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:background="@drawable/radius"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="다음" />
+
+
+</LinearLayout>
