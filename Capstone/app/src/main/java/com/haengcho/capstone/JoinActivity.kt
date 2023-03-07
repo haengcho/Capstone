@@ -4,6 +4,8 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
@@ -19,6 +21,19 @@ class JoinActivity : AppCompatActivity() {
         joinBtn.setOnClickListener {
             val intent = Intent(this, JoinMemberShipActivity::class.java)
             startActivity(intent)
+        }
+
+        val loginBtn = findViewById<Button>(R.id.loginBtn)
+        val idArea = findViewById<EditText>(R.id.idArea)
+        val passwordArea = findViewById<EditText>(R.id.passwordArea)
+        loginBtn.setOnClickListener {
+            if(idArea.text.isEmpty() || passwordArea.text.isEmpty()){
+            Toast.makeText(this, "아이디와 비밀번호를 다시 확인해주세요.", Toast.LENGTH_LONG).show()
+        }
+            else{
+
+            }
+
         }
 
     }
