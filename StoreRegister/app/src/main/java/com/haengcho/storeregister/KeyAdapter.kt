@@ -3,6 +3,7 @@ package com.haengcho.storeregister
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -32,6 +33,7 @@ class KeyAdapter(val context : Context, val items: ArrayList<KeywordModel>) : Re
             }
 
         }
+
         holder.apply {
             bind(listener, item)
             itemView.tag = item

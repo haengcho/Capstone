@@ -141,88 +141,81 @@
             android:background="@drawable/radius3"
             android:layout_width="match_parent"
             android:layout_height="40dp">
-            <TextView
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:text="월 화 수 목 금 토 일"
+            <Button
+                android:id="@+id/Mon"
+                android:text="월"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:background="#00ff0000"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"/>
-<!--            <Button-->
-<!--                android:text="월"-->
-<!--                android:gravity="center"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/radius3"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"/>-->
-<!--            <Button-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:text="화"-->
-<!--                android:gravity="center"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/radius3"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"/>-->
-<!--            <Button-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:text="수"-->
-<!--                android:gravity="center"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/radius3"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"/>-->
-<!--            <Button-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:text="목"-->
-<!--                android:gravity="center"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/radius3"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"/>-->
-<!--            <Button-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:text="금"-->
-<!--                android:gravity="center"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/radius3"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp""/>-->
-<!--            <Button-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:text="토"-->
-<!--                android:gravity="center"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/radius3"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"/>-->
-<!--            <Button-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:text="일"-->
-<!--                android:gravity="center"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/radius3"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"/> -->
+                android:layout_width="35dp"
+                android:layout_height="48dp"/>
+            <Button
+                android:id="@+id/Tue"
+                android:layout_marginLeft="5dp"
+                android:text="화"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="#00ff0000"
+                android:layout_width="35dp"
+                android:layout_height="48dp"/>
+            <Button
+                android:id="@+id/Wen"
+                android:layout_marginLeft="5dp"
+                android:text="수"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="#00ff0000"
+                android:layout_width="35dp"
+                android:layout_height="48dp"/>
+            <Button
+                android:id="@+id/Thu"
+                android:layout_marginLeft="5dp"
+                android:text="목"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="#00ff0000"
+                android:layout_width="35dp"
+                android:layout_height="48dp"/>
+            <Button
+                android:id="@+id/Fri"
+                android:layout_marginLeft="5dp"
+                android:text="금"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="#00ff0000"
+                android:layout_width="35dp"
+                android:layout_height="48dp"/>
+            <Button
+                android:id="@+id/Sat"
+                android:layout_marginLeft="5dp"
+                android:text="토"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="#00ff0000"
+                android:layout_width="35dp"
+                android:layout_height="48dp"/>
+            <Button
+                android:id="@+id/Sun"
+                android:layout_marginLeft="5dp"
+                android:text="일"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="#00ff0000"
+                android:layout_width="35dp"
+                android:layout_height="48dp"/>
         </LinearLayout>
 
-        <TextView
+        <EditText
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="오전 00:00 ~ 오전 00:00"
+            android:hint="오전 00:00 ~ 오전 00:00"
             android:gravity="center"
             android:textSize="20sp"
             android:background="#00ff0000"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
-
     </LinearLayout>
-
-
 
 
     <Button
