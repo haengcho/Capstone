@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         myStore.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-                builder.setTitle("알림")
+                .setTitle("알림")
                 builder.setMessage("               등록된 내 매장이 없습니다.\n                        등록하시겠습니까?")
                 builder.setCancelable(false)
                 fun skipPage() {
@@ -37,6 +37,33 @@ class MainActivity : AppCompatActivity() {
                     override fun onClick(dialog: DialogInterface, which: Int) {
                     }
                     })
+            // 다이얼로그를 띄워주기
+            builder.show()
+        }
+
+        val signOut = findViewById<Button>(R.id.signOut)
+        signOut.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+                .setTitle("알림")
+            builder.setMessage("로그아웃 하시겠습니까?")
+            builder.setCancelable(false)
+            fun skipPage() {
+                val intent = Intent(this, StoreRegister::class.java)
+                startActivity(intent)
+            }
+
+            builder.setPositiveButton("확인", object : DialogInterface.OnClickListener {
+                override fun onClick(dialog: DialogInterface, which: Int) {
+                    when(which){
+                        DialogInterface.BUTTON_POSITIVE ->
+                            skipPage()
+                    }
+                }
+            })
+            builder.setNegativeButton("뒤로", object : DialogInterface.OnClickListener {
+                override fun onClick(dialog: DialogInterface, which: Int) {
+                }
+            })
             // 다이얼로그를 띄워주기
             builder.show()
         }

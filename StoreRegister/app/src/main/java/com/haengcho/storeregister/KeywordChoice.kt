@@ -13,34 +13,15 @@ import androidx.recyclerview.widget.RecyclerView
 
 class KeywordChoice : AppCompatActivity() {
 
-    private val list = ArrayList<KeywordModel>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_keyword_choice)
 
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.coffee)!!, "차, 커피"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.nail)!!, "네일아트"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.health)!!, "헬스장"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.store)!!, "편의점, 마트"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.hair)!!, "미용실"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.bathhouse)!!, "목욕탕"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.diningroom)!!, "음식점"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.shirt)!!, "옷가게"))
+        val listkey = findViewById<RecyclerView>(R.id.listkey)
+        val adapter = KeyAdapter(getData())
 
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.coffee)!!, "차, 커피"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.nail)!!, "네일아트"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.health)!!, "헬스장"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.store)!!, "편의점, 마트"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.hair)!!, "미용실"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.bathhouse)!!, "목욕탕"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.diningroom)!!, "음식점"))
-        list.add(KeywordModel(ContextCompat.getDrawable(this, R.drawable.shirt)!!, "옷가게"))
-
-        val rv = findViewById<RecyclerView>(R.id.listkey)
-        val adapter = KeyAdapter(this, list)
-        rv.adapter = adapter
-        rv.layoutManager = GridLayoutManager(this, 3)
+        listkey.layoutManager = GridLayoutManager(this, 3)
+        listkey.adapter = adapter
 
 
         val saveBtn = findViewById<Button>(R.id.saveBtn)
@@ -50,6 +31,23 @@ class KeywordChoice : AppCompatActivity() {
         }
 
     }
+
+    private fun getData(): ArrayList<KeywordModel>{
+        val itemList: ArrayList<KeywordModel> = ArrayList()
+
+        itemList.add(KeywordModel(ContextCompat.getDrawable(this,R.drawable.coffee)!!, "차, 커피", false))
+        itemList.add(KeywordModel(ContextCompat.getDrawable(this,R.drawable.nail)!!, "네일아트", false))
+        itemList.add(KeywordModel(ContextCompat.getDrawable(this,R.drawable.health)!!, "헬스장", false))
+        itemList.add(KeywordModel(ContextCompat.getDrawable(this,R.drawable.store)!!, "편의점, 마트", false))
+        itemList.add(KeywordModel(ContextCompat.getDrawable(this,R.drawable.hair)!!, "미용실", false))
+        itemList.add(KeywordModel(ContextCompat.getDrawable(this,R.drawable.bathhouse)!!, "목욕탕", false))
+        itemList.add(KeywordModel(ContextCompat.getDrawable(this,R.drawable.diningroom)!!, "음식점", false))
+        itemList.add(KeywordModel(ContextCompat.getDrawable(this,R.drawable.shirt)!!, "옷가게", false))
+
+        return itemList
+
+    }
+
 
     override fun onBackPressed() {
         val builder= AlertDialog.Builder(this)
@@ -64,10 +62,10 @@ class KeywordChoice : AppCompatActivity() {
         builder.setNegativeButton("뒤로", object : DialogInterface.OnClickListener {
             override fun onClick(dialog: DialogInterface?, which: Int) {}
         })
-        builder.show() // 다이얼로그 보이기
+        builder.show()
     }
 
-    fun exit() { // 종료
+    fun exit() {
         super.onBackPressed()
     }
 }
